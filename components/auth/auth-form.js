@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { signIn } from 'next-auth/client';
+import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
 
 import classes from './auth-form.module.css';
@@ -84,8 +84,7 @@ function AuthForm() {
           <button
             type='button'
             className={classes.toggle}
-            onClick={switchAuthModeHandler}
-          >
+            onClick={switchAuthModeHandler}>
             {isLogin ? 'Create new account' : 'Login with existing account'}
           </button>
         </div>
